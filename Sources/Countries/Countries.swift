@@ -243,6 +243,8 @@ public enum Country: String {
     case zambia = "zm"
     case zimbabwe = "zw"
     
+    case allCountries = "ac"
+    
     public var abbreviation: String {
         return self.rawValue
     }
@@ -492,6 +494,7 @@ public enum Country: String {
         case .yemen: return "Yemen"
         case .zambia: return "Zambia"
         case .zimbabwe: return "Zimbabwe"
+        case .allCountries: return "All Countries"
         }
     }
 }
