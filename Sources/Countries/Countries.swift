@@ -1,4 +1,4 @@
-public enum Country: String {
+public enum Country: String, Equatable {
     case germany = "de"
     case unitedKingdom = "gb"
     case unitedStates = "us"
