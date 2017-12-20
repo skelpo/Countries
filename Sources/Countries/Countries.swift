@@ -245,8 +245,12 @@ public enum Country: String {
     
     case allCountries = "ac"
     
-    public var abbreviation: String {
-        return self.rawValue
+    public var abbreviation: String? {
+        if self.rawValue == "NULL" {
+            return nil
+        } else {
+            return self.rawValue
+        }
     }
     
     public var name: String {
