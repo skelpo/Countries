@@ -17,6 +17,10 @@ extension String {
             range: NSMakeRange(0, self.utf8.count),
             withTemplate: "$1"
         )
-        return Country(rawValue: code) ?? `default`
+        switch code {
+        case "uk": return Country.unitedKingdom
+        case "com": return Country.unitedStates
+        default: return Country(rawValue: code) ?? `default`
+        }
     }
 }
