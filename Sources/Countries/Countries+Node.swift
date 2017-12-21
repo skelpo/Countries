@@ -10,7 +10,10 @@ extension Country: NodeConvertible {
     }
     
     public func makeNode(in context: Context?) throws -> Node {
-        return Node(stringLiteral: self.rawValue)
+        if let abbr = self.abbreviation {
+            return Node(abbr, in: context)
+        }
+        return Node.null
     }
 }
 
