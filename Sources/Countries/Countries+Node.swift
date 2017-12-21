@@ -13,3 +13,10 @@ extension Country: NodeConvertible {
         return Node(stringLiteral: self.rawValue)
     }
 }
+
+extension Node {
+    public var country: Country? {
+        return self.country
+    }
+}
+
