@@ -4,7 +4,7 @@ extension Country: NodeConvertible {
     public init(node: Node) throws {
         let code: String = try node.get()
         guard let country = Country(rawValue: code) else {
-            throw NodeError.unableToConvert(input: node, expectation: "\(String.self)", path: [])
+            throw CountryError.unsupportedCountryCode(code)
         }
         self = country
     }
