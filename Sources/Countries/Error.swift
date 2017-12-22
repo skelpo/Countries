@@ -3,7 +3,7 @@ public enum CountryError: Error, CustomStringConvertible {
     
     public var description: String {
         switch self {
-        case let .unsupportedCountryCode(code): return "There was no country if the code '\(code)' found"
+        case let .unsupportedCountryCode(code): return "No country with the code '\(code)' was found"
         }
     }
 }
