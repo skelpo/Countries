@@ -7,7 +7,7 @@ import Foundation
 fileprivate var regex: NSRegularExpression?
 
 extension String {
-    public func countryFromURL(`default`: Country = .allCountries)throws -> Country {
+    public func countryFromURL()throws -> Country? {
         if regex == nil {
             regex = try NSRegularExpression(pattern: "http(?:s)?:\\/\\/(?:(?:.*?)\\.)?(?:[^\\/]*?)(?:\\.co)?\\.(.*?)(?:\\/|$)", options: [])
         }
@@ -20,7 +20,11 @@ extension String {
         switch code {
         case "uk": return Country.unitedKingdom
         case "com": return Country.unitedStates
-        default: return Country(rawValue: code) ?? `default`
+        default: return Country(rawValue: code)
         }
+    }
+    
+    public func countryFromURL(`default`: Country = .allCountries)throws -> Country {
+        return try self.countryFromURL() ?? `default`
     }
 }
