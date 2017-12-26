@@ -1,4 +1,6 @@
 public enum Country: String, Equatable, Hashable {
+    
+    // MARK: - Cases
     case germany = "de"
     case unitedKingdom = "gb"
     case unitedStates = "us"
@@ -244,6 +246,9 @@ public enum Country: String, Equatable, Hashable {
     case zimbabwe = "zw"
     
     case allCountries = "ac"
+    
+    
+    // MARK: - Properties
     
     public var abbreviation: String? {
         if self.rawValue == "NULL" {
