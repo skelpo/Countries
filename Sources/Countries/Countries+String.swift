@@ -9,7 +9,7 @@ fileprivate var regex: NSRegularExpression!
 extension String {
     public func countryFromURL()throws -> Country? {
         if regex == nil {
-            regex = try NSRegularExpression(pattern: "http(?:s)?:\\/\\/(?:(?:.*?)\\.)?(?:[^\\/]*?)(?:\\.co)?\\.(.*?)(?:\\/|$)", options: [])
+            regex = try NSRegularExpression(pattern: "http(?:s)?:\\/\\/(?:(?:.*?)\\.)?(?:[^\\/]*?)(?:\\.co)?\\.(.*?)(?:\\/|$).*", options: [])
         }
         let code = regex.stringByReplacingMatches(
             in: self,
