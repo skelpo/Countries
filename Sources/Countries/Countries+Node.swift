@@ -19,7 +19,7 @@ extension Country: NodeConvertible {
 
 extension Node {
     public var country: Country? {
-        return self.country
+        return self.wrapped.country
     }
 }
 
