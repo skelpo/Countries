@@ -1,5 +1,5 @@
 extension Country {
-    var allCases: [Country] {
+    static var allCases: [Country] {
         return [ .germany,
                  .unitedKingdom,
                  .unitedStates,
