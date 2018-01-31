@@ -2,39 +2,21 @@
   "object": {
     "pins": [
       {
-        "package": "Bits",
-        "repositoryURL": "https://github.com/vapor/bits.git",
+        "package": "Async",
+        "repositoryURL": "https://github.com/vapor/async.git",
         "state": {
-          "branch": null,
-          "revision": "c32f5e6ae2007dccd21a92b7e33eba842dd80d2f",
-          "version": "1.1.0"
+          "branch": "beta",
+          "revision": "1dca2de76d8986126ac624966210bc2213ac7f3d",
+          "version": null
         }
       },
       {
         "package": "Core",
         "repositoryURL": "https://github.com/vapor/core.git",
         "state": {
-          "branch": null,
-          "revision": "f9f3a585ab0ea5764b46d7a36d9c0d9d508b9c63",
-          "version": "2.2.0"
-        }
-      },
-      {
-        "package": "Debugging",
-        "repositoryURL": "https://github.com/vapor/debugging.git",
-        "state": {
-          "branch": null,
-          "revision": "fc5a27d6eb236141dc24e5f14eedaa2e035ae7b3",
-          "version": "1.1.1"
-        }
-      },
-      {
-        "package": "Node",
-        "repositoryURL": "https://github.com/vapor/node.git",
-        "state": {
-          "branch": null,
-          "revision": "d1a2a5938d293c8a6ffcb73e04d16791cd8025a3",
-          "version": "2.1.2"
+          "branch": "beta",
+          "revision": "1c864c2f4b2d98d9d2a0b8a7d121546e7c3104d1",
+          "version": null
         }
       }
     ]

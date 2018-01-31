@@ -8,10 +8,10 @@ let package = Package(
         .library(name: "Countries", targets: ["Countries"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/node.git", .upToNextMajor(from: "2.0.0"))
+        .package(url: "https://github.com/vapor/core.git", .branch("beta"))
     ],
     targets: [
-        .target(name: "Countries", dependencies: ["Node"]),
+        .target(name: "Countries", dependencies: ["Bits"]),
         .testTarget(name: "CountriesTests", dependencies: ["Countries"]),
     ]
 )
