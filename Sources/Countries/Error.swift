@@ -1,21 +1,15 @@
 import Debugging
 
-public enum CountryError: Error, Debuggable, CustomStringConvertible {
-    case unsupportedCountryCode(String)
-    
-    public var description: String {
-        switch self {
-        case let .unsupportedCountryCode(code): return "No country with the code '\(code)' was found"
-        }
-    }
-    
+public struct CountryError: Error, Debuggable, CustomStringConvertible {
+    public let description: String
+    public let identifier: String
     public var reason: String {
         return self.description
     }
-    
-    public var identifier: String {
-        switch self {
-        case .unsupportedCountryCode: return "unsupportedCountryCode"
-        }
+}
+
+extension CountryError {
+    public static func unsupportedCountryCode(_ code: String) -> CountryError {
+        return self.init(description: "No country with the code '\(code)' was found", identifier: "unsupportedCountryCode")
     }
 }
