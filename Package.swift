@@ -11,7 +11,7 @@ let package = Package(
         .package(url: "https://github.com/vapor/core.git", from: "3.0.0-rc")
     ],
     targets: [
-        .target(name: "Countries", dependencies: ["Debugging"]),
+        .target(name: "Countries", dependencies: ["Debugging", "CodableKit"]),
         .testTarget(name: "CountriesTests", dependencies: ["Countries"]),
     ]
 )
