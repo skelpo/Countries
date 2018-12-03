@@ -250,7 +250,7 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
     public init(from decoder: Decoder)throws {
         let container = try decoder.singleValueContainer()
         let code = try container.decode(String.self)
-        if let country = Country.init(rawValue: code.lowercased()) {
+        if let country = Country.init(rawValue: code.uppercased()) {
             self = country
         } else if let country = Country.init(name: code) {
             self = country
