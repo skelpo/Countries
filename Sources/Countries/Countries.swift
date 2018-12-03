@@ -245,7 +245,7 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
     case zambia = "zm"
     case zimbabwe = "zw"
     
-    case allCountries = "ac"
+    case allCountries = "all"
     
     public init(from decoder: Decoder)throws {
         let container = try decoder.singleValueContainer()
@@ -263,7 +263,7 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
     // MARK: - Properties
     
     public var abbreviation: String? {
-        if self.rawValue == "NULL" {
+        if self.rawValue.count != 2 {
             return nil
         } else {
             return self.rawValue
