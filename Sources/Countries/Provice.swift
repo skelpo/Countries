@@ -454,4 +454,14 @@ public enum Province: String, Equatable, Hashable, CaseIterable, Codable {
     case mh = "MH"
     case mp = "MP"
     case pw = "PW"
+    
+    public init(from decoder: Decoder)throws {
+        let container = try decoder.singleValueContainer()
+        let code = try container.decode(String.self)
+        if let state = Province(rawValue: code.uppercased()) {
+            self = state
+        } else {
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Cannot create `Province` instance from code `\(code)`")
+        }
+    }
 }
