@@ -1,4 +1,4 @@
-public enum Country: String, Equatable, Hashable {
+public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
     
     // MARK: - Cases
     case germany = "de"
