@@ -508,7 +508,7 @@ public enum Country: String, Equatable, Hashable, Codable, CaseIterable {
         case .vanuatu: return "Vanuatu"
         case .venezuela: return "Venezuela"
         case .vietNam: return "Viet Nam"
-        case .virginIslandsUK: return " British Virgin Islands"
+        case .virginIslandsUK: return "British Virgin Islands"
         case .virginIslandsUS: return "United States Virgin Islands"
         case .wallisAndFutuna: return "Wallis and Futuna"
         case .westernSahara: return "Western Sahara"
